@@ -14,6 +14,7 @@ public class TurmaService implements IService<Turma> {
     public List<Turma> listar() {
         return turmaDAO.listar();
     }
+
     @Override
     public Turma buscarPorId(int id) {
         return turmaDAO.buscarPorId(id);

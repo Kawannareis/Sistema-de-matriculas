@@ -23,6 +23,6 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toJson() {
-        return "{ \"id\": " + id + ", \"nome\": \"" + nome + "\", \"email\": \"" + email + "\", \"matricula\": \"" + matricula + "\" }";
+        return "{ "id": " + id + ", "nome": "" + nome + "", "email": "" + email + "", "matricula": "" + matricula + "" }";
     }
 }

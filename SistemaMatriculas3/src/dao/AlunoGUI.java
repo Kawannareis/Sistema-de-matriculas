@@ -1,18 +1,8 @@
 package dao;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.util.List;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 public class AlunoGUI extends JFrame {
 
@@ -27,9 +17,9 @@ public class AlunoGUI extends JFrame {
         setTitle("Sistema de Matrículas - Alunos");
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // centraliza a janela
+        setLocationRelativeTo(null); 
 
-        // Criando componentes
+    
         nomeField = new JTextField(20);
         emailField = new JTextField(20);
         matriculaField = new JTextField(20);
@@ -41,7 +31,7 @@ public class AlunoGUI extends JFrame {
         listaArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(listaArea);
 
-        // Painel de formulário
+        
         JPanel formPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         formPanel.add(new JLabel("Nome:"));
         formPanel.add(nomeField);
@@ -52,12 +42,12 @@ public class AlunoGUI extends JFrame {
         formPanel.add(btnAdicionar);
         formPanel.add(btnListar);
 
-        // Layout principal
+        
         setLayout(new BorderLayout(10, 10));
         add(formPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Ações dos botões
+        
         btnAdicionar.addActionListener(e -> adicionarAluno());
         btnListar.addActionListener(e -> listarAlunos());
     }
@@ -77,7 +67,7 @@ public class AlunoGUI extends JFrame {
 
         JOptionPane.showMessageDialog(this, "Aluno adicionado com sucesso!");
 
-        // Limpa os campos
+        
         nomeField.setText("");
         emailField.setText("");
         matriculaField.setText("");

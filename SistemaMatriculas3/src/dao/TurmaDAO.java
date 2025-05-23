@@ -18,7 +18,7 @@ public class TurmaDAO implements IDAO<Turma> {
 
             stmt.setString(1, turma.getNome());
             stmt.setString(2, turma.getProfessor());
-            stmt.setString(3, turma.getHorario());  // adicionado horário
+            stmt.setString(3, turma.getHorario());  
             stmt.executeUpdate();
             System.out.println("✅ Turma inserida com sucesso!");
 
@@ -41,7 +41,7 @@ public class TurmaDAO implements IDAO<Turma> {
                     rs.getInt("id"),
                     rs.getString("nome"),
                     rs.getString("professor"),
-                    rs.getString("horario")   // adicionado horário
+                    rs.getString("horario")   
                 );
                 turmas.add(turma);
             }
@@ -69,7 +69,7 @@ public class TurmaDAO implements IDAO<Turma> {
                     rs.getInt("id"),
                     rs.getString("nome"),
                     rs.getString("professor"),
-                    rs.getString("horario")  // adicionado horário
+                    rs.getString("horario")  
                 );
             }
 
@@ -89,7 +89,7 @@ public class TurmaDAO implements IDAO<Turma> {
 
             stmt.setString(1, turma.getNome());
             stmt.setString(2, turma.getProfessor());
-            stmt.setString(3, turma.getHorario());  // adicionado horário
+            stmt.setString(3, turma.getHorario());  
             stmt.setInt(4, turma.getId());
             stmt.executeUpdate();
 
