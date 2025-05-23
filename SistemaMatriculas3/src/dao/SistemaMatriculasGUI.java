@@ -1,4 +1,4 @@
-package gui;
+package dao;
 
 import dao.*;
 import javax.swing.*;

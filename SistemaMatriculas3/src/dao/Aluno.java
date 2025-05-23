@@ -21,8 +21,8 @@ public class Aluno extends Pessoa {
         return super.toString() + ", Matrícula: " + matricula;
     }
 
-    @Override
-    public String toJson() {
-        return "{ "id": " + id + ", "nome": "" + nome + "", "email": "" + email + "", "matricula": "" + matricula + "" }";
+  @Override
+public String toJson() {
+    return "{ \"id\": " + id + ", \"nome\": \"" + nome + "\", \"email\": \"" + email + "\", \"matricula\": \"" + matricula + "\" }";
     }
 }
